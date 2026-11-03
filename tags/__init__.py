@@ -9,11 +9,11 @@ import jieba
 
 
 STOPWORDS_PATH = Path(__file__).with_name("cn_stopwords.txt")
+CUSTOM_TAGS_PATH = Path(__file__).with_name("game_role_tags.txt")
 CUSTOM_TAGS = [
-    "绫华", "凯亚", "琴", "丽莎", "迪卢克", "芭芭拉", "莫娜", "迪奥娜", "优菈", "米卡",
-    "香菱", "魈", "胡桃", "云堇", "嘉明", "枫原万叶", "宵宫", "九条裟罗", "雷神", "雷电影",
-    "心海", "荒泷一斗", "神子", "久岐忍", "鹿野院", "平藏", "多莉", "流浪者", "林尼", "琳妮特",
-    "菲米尼", "芙宁娜", "娜维娅", "卡萨帕", "阿蕾奇诺", "三月七", "克拉拉",
+    line.strip()
+    for line in CUSTOM_TAGS_PATH.read_text(encoding="utf-8").splitlines()
+    if line.strip() and not line.lstrip().startswith("#")
 ]
 
 

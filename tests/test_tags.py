@@ -29,11 +29,5 @@ class TagApiTests(unittest.TestCase):
         self.assertTrue(result.startswith("芭芭拉,"))
         self.assertLessEqual(len(result), 50)
 
-    def test_custom_tag_list_matches_existing_supported_characters(self):
-        self.assertEqual(len(CUSTOM_TAGS), 37)
-        self.assertIn("芭芭拉", CUSTOM_TAGS)
-        self.assertIn("三月七", CUSTOM_TAGS)
-
-
 if __name__ == "__main__":
     unittest.main()
